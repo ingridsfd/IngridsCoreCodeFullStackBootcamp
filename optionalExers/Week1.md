@@ -36,9 +36,23 @@ function reverseWords(str){
 ## Exercise Smallest Integer In Array
 
 ```JavaScript
-code block
+//1. We have an array of integers which is expressed in args
+//2. We must find the smallest number with Math.min()
+//3. Google how we express smallest number in the array
+//3.1 The expression is Math.min(...args)
+//4. return the condition
+
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
 ```
 
 # Week challenges (Thursday) 💻
 
-## Exercise
+## Exercise Odd or Even (num impar o par)
+
+```JavaScript
+
+```
