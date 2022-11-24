@@ -54,5 +54,38 @@ class SmallestIntegerFinder {
 ## Exercise Odd or Even (num impar o par)
 
 ```JavaScript
+//0. Look for the .reduce() apply it in its arrow function
+//1. If the arr is odd return string "odd" arr % 2 === 0
+//2. If the arr is even return string "even"
+//3. If the input array is empty, consider it as [0]
+//4. Try it
 
+//example odd
+let arr = [0,1,4];
+//example even
+let arr2 = [0,1,1];
+//function
+function oddOrEven(array) {
+   const sumArr = array.reduce((acc, curr) => (acc + curr), 0);
+   return sum % 2 === 0 ? 'Even' : 'Odd';
+}
+console.log(oddOrEven(array));
+
+```
+
+Version 2
+
+```JavaScript
+let array = [0, 1, 1];
+
+function oddOrEven(array) {
+  const sum = array.reduce((acc, val) => acc + val, 0);
+  if (sum % 2 === 0) {
+    return 'Even'
+  } else {
+    return 'Odd'
+  }
+}
+
+console.log(oddOrEven(array));
 ```
