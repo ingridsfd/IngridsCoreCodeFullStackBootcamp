@@ -4,8 +4,8 @@ This is for me to track my progress in the Full Stack bootcamp of Core Code. The
 
 Here are the weeks listed:
 
-- Week 1: [React]()
-- Week 2: [React]()
+- Week 1: [React](https://github.com/ingridsfd/IngridsCoreCodeFullStackBootcamp/blob/master/optionalExers/Week1.md)
+- Week 2: [React](https://github.com/ingridsfd/IngridsCoreCodeFullStackBootcamp/blob/master/optionalExers/Week2.md)
 - Week 3: [React]()
 - Week 4: [React, Pause Day & Node]()
 - Week 5: [Node]()
