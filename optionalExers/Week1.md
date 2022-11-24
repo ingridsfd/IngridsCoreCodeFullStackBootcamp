@@ -67,7 +67,7 @@ let arr2 = [0,1,1];
 //function
 function oddOrEven(array) {
    const sumArr = array.reduce((acc, curr) => (acc + curr), 0);
-   return sum % 2 === 0 ? 'Even' : 'Odd';
+   return sum % 2 === 0 ? 'even' : 'odd';
 }
 console.log(oddOrEven(array));
 
@@ -81,9 +81,9 @@ let array = [0, 1, 1];
 function oddOrEven(array) {
   const sum = array.reduce((acc, val) => acc + val, 0);
   if (sum % 2 === 0) {
-    return 'Even'
+    return 'even'
   } else {
-    return 'Odd'
+    return 'odd'
   }
 }
 
