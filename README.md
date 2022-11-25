@@ -1,6 +1,6 @@
 # About this repo:
 
-This is for me to track my progress in the Full Stack bootcamp of Core Code. The exercises are optional to make.
+This is for me to track my progress in the Full Stack bootcamp of Core Code. The exercises are optional to make and I know doing this, will help me dominate JavaScript syntax.
 
 Here are the weeks listed:
 
