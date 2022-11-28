@@ -76,7 +76,59 @@ function well(x, v){
 ## <mark style="background-color: #F39A27">Exercise React Manage Events</mark>
 
 ```JavaScript
-Here goes code
+import React, {useState} from 'react';
+
+export class Counter extends React.Component {
+  constructor(props) {
+    // Your state
+    function App = () => {
+      const [num, setNum] = useState(0);
+      const suma = () => {
+        setNum(num+1);
+      }
+      const resta = () => {
+        setNum(num-1);
+      }
+    }
+  }
+
+    return (
+      <div>
+        <h1>{num}</h1>
+          <button onClick={resta}>Decrement</button>
+          <button onClick={suma}>Increment</button>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+### En teoría, esta debe ser la respuesta correcta. Version 2:
+
+```JavaScript
+import React, {useState} from 'react';
+
+function App() {
+  const [num, setNum] = useState(0);
+  const suma = () => {
+    setNum (num+1);
+  }
+  const resta = () => {
+    setNum (num-1);
+  }
+
+  return (
+    <div>
+      <h1>{num}</h1>
+      <button onClick={suma}>Increment</button>
+      <button on Click={resta}>Decrement</button>
+    </div>
+  );
+}
+
+export default App;
 ```
 
 # Week challenges (Thursday) 💻
