@@ -1,3 +1,11 @@
+# Week challenges (Monday) 💻
+
+## Exercise
+
+```JavaScript
+Here goes code
+```
+
 # Week challenges (Tuesday) 💻
 
 ## Exercise
