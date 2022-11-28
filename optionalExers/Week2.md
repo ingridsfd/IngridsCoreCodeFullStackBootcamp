@@ -1,5 +1,14 @@
 # Week challenges (Monday) 💻
 
+### Color palette for highlights:
+
+- <mark style="background-color: #C23B23">Red</mark> - #C23B23
+- <mark style="background-color: #F39A27">Orange</mark> - #F39A27 <mark style="background-color: #F39A27">for important exercises to do</mark>
+- <mark style="background-color: #EADA52">Yellow</mark> - #EADA52
+- <mark style="background-color: #03C03C">Green</mark> - #03C03C
+- <mark style="background-color: #579ABE">Blue</mark> - #579ABE
+- <mark style="background-color: #976ED7">Purple</mark> - #976ED7
+
 ## Exercise isPalindrome?
 
 ```JavaScript
@@ -15,6 +24,30 @@ function isPalindrome(line) {
   //5. ask if it'll be equal: reversed to non-reversed
   return reverseStr === lowRegStr;
 }
+```
+
+## Notes React Code Session Saturday 26, Nov:
+
+Steps to create / apply useState():
+
+```JavaScript
+//1. Crear una variable
+const [name, setName] = useSate('');
+//2. Crear la función que se insterta en el <input value> del formulario
+const handleName = (e) => {
+  setName(e.target.value);
+};
+//3. Este es el ejemplo de la inserción
+return (
+  <div>
+    <form>
+      <p>name</p>
+      <input value={name}> name='name' onChange={handleName}  placeholder?'name...'/>
+      ...
+    </form>
+  </div>
+)
+
 ```
 
 # Week challenges (Tuesday) 💻
@@ -40,7 +73,7 @@ function well(x, v){
 
 # Week challenges (Wednesday) 💻
 
-## Exercise
+## <mark style="background-color: #F39A27">Exercise React Manage Events</mark>
 
 ```JavaScript
 Here goes code
