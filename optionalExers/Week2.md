@@ -78,38 +78,6 @@ function well(x, v){
 ```JavaScript
 import React, {useState} from 'react';
 
-export class Counter extends React.Component {
-  constructor(props) {
-    // Your state
-    function App = () => {
-      const [num, setNum] = useState(0);
-      const suma = () => {
-        setNum(num+1);
-      }
-      const resta = () => {
-        setNum(num-1);
-      }
-    }
-  }
-
-    return (
-      <div>
-        <h1>{num}</h1>
-          <button onClick={resta}>Decrement</button>
-          <button onClick={suma}>Increment</button>
-      </div>
-    );
-  }
-}
-
-export default App;
-```
-
-### En teoría, esta debe ser la respuesta correcta. Version 2:
-
-```JavaScript
-import React, {useState} from 'react';
-
 function App() {
   const [num, setNum] = useState(0);
   const suma = () => {
