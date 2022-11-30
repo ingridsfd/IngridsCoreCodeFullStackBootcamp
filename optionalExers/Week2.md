@@ -99,10 +99,186 @@ function App() {
 export default App;
 ```
 
-# Week challenges (Thursday) 💻
-
-## Exercise
+Version 2 with Kata:
 
 ```JavaScript
-Here goes code
+const React = require("react");
+
+export class Counter extends React.Component {
+  constructor(props) {
+    // Your state
+    super(props);
+    this.handleIncrement = this.handleIncrement.bind(this)
+    this.handleDecrement = this.handleDecrement.bind(this)
+    this.state = {value: 0}
+  }
+
+  // Your event handlers
+  handleIncrement(event) {
+    this.setState({value: state.counter + 1})
+  }
+
+  handleDecrement(event) {
+    this.setState({value: state.counter - 1})
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.counter}</h1>
+          <button type="button" onClick={this.handleDecrement}>
+            Decrement
+          </button>
+          <button type="button" onClick={this.handleIncrement}>
+            Increment
+          </button>
+      </div>
+    )
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Counter/>);
+```
+
+# Week challenges (Thursday) 💻
+
+## Exercise React Santa Wish List
+
+Version 1:
+
+```JavaScript
+const React = require("react");
+
+class WishlistForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: '', wish: '', priority: 1 };
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleWishChange = this.handleWishChange.bind(this);
+    this.handlePriorityChange = this.handlePriorityChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleNameChange(e) {
+    this.setState({name: e.target.value});
+  }
+
+  handleWishChange(e) {
+    this.setState({wish: e.target.value});
+  }
+
+
+  handlePriorityChange(e) {
+    this.setState({priority: e.target.value});
+  }
+
+  handleSubmit(e){
+    e.preventDefault();
+    this.props.send(this.state);
+  }
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+       Name: <input type="text" id="name" value={this.state.name} onChange={this.handleNameChange}/>
+       Wish: <textarea rows="10" cols="10" id="wish" value={this.state.wish} onChange={this.handleWishChange} />
+       <br />
+       Wish Priority:
+       <select value={this.state.priority} id="priority" onChange={this.handlePriorityChange}>
+         <option value={1}>1</option>
+         <option value={2}>2</option>
+         <option value={3}>3</option>
+         <option value={4}>4</option>
+         <option value={5}>5</option>
+      </select>
+      </form>
+    );
+  }
+};
+```
+
+Version 2:
+
+```JavaScript
+import React from "react";
+import "./styles.css";
+
+class WishlistForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      wish: "",
+      priority: 1
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    const { name, value } = e.target;
+    this.setState({
+      ...this.state,
+      [name]: value
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    this.props.send(this.state);
+  }
+
+  render() {
+    return (
+      <form>
+        <div>
+          <label>Name:</label>
+          <input
+            id="name"
+            name="name"
+            value={this.state.name}
+            onChange={(e) => this.handleChange(e)}
+          />
+        </div>
+        <div>
+          <label>Wish:</label>
+          <textarea
+            id="wish"
+            name="wish"
+            value={this.state.wish}
+            onChange={(e) => this.handleChange(e)}
+          />
+        </div>
+        <div>
+          <label>Priority:</label>
+          <select
+            name="priority"
+            value={this.state.priority}
+            onChange={(e) => this.handleChange(e)}
+            id="priority"
+          >
+            {[1, 2, 3, 4, 5].map((val) => (
+              <option value={val} id={val} key={val}>
+                {val}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <input
+            type="submit"
+            value="Submit"
+            onClick={() => this.handleSubmit}
+          />
+        </div>
+      </form>
+    );
+  }
+}
+
+export default function App() {
+  return (
+    <div className="App">
+      <WishlistForm send={(form) => console.log(form)} />
+    </div>
+  );
+}
 ```
