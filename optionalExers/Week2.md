@@ -282,3 +282,26 @@ export default function App() {
   );
 }
 ```
+
+## (Extra) Exercise Control the Beast (controlled components in ReactJS)
+
+```JavaScript
+const React = require("react");
+
+class Beast extends React.Component{
+  constructor(props) {
+    super(props)
+    this.state = { name: '' }
+    this.handleBeast() = this.state.handleBeast.bind(this);
+    }
+  handleCurrentBeast(event){
+    this.setState({value: state.beast})
+  }
+
+  render() {
+    return(
+      <input id="controlledName" value={} />
+    );
+  }
+}
+```
