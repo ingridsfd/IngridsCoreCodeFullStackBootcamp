@@ -15,7 +15,7 @@
 function isPalindrome(line) {
   //1. Convert to string if there's a number
   let fromNum = line.toString();
-  //2. Use replace because we have to make sure it reads all characters to then reverse
+  //2. Use replace because we have to make sure it reads all          characters to then reverse
   let re = /[\W_]/g;
   //3. Make sure it will read the entire string
   let lowRegStr = fromNum.toLowerCase().replace(re, '');
@@ -110,25 +110,25 @@ export class Counter extends React.Component {
     super(props);
     this.handleIncrement = this.handleIncrement.bind(this)
     this.handleDecrement = this.handleDecrement.bind(this)
-    this.state = {value: 0}
+    this.state = {counter: 0}
   }
 
   // Your event handlers
   handleIncrement(event) {
-    this.setState({value: state.counter + 1})
+    this.setState({counter: this.state.counter + 1})
   }
 
   handleDecrement(event) {
-    this.setState({value: state.counter - 1})
+    this.setState({counter: this.state.counter - 1})
   }
   render() {
     return (
       <div>
-        <h1>{this.state.counter}</h1>
-          <button type="button" onClick={this.handleDecrement}>
+        <h1 id='counter'>{this.state.counter}</h1>
+          <button type="button" onClick={this.handleDecrement} id='decrement'>
             Decrement
           </button>
-          <button type="button" onClick={this.handleIncrement}>
+          <button type="button" onClick={this.handleIncrement} id='increment'>
             Increment
           </button>
       </div>
@@ -136,8 +136,8 @@ export class Counter extends React.Component {
   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Counter/>);
+//const root = ReactDOM.createRoot(document.getElementById('root'));
+//root.render(<Counter/>);
 ```
 
 # Week challenges (Thursday) 💻
@@ -288,20 +288,27 @@ export default function App() {
 ```JavaScript
 const React = require("react");
 
-class Beast extends React.Component{
+class Beast extends React.Component {
   constructor(props) {
-    super(props)
-    this.state = { name: '' }
-    this.handleBeast() = this.state.handleBeast.bind(this);
-    }
-  handleCurrentBeast(event){
-    this.setState({value: state.beast})
+    super(props);
+    this.state = {
+      name: props.name
+    };
   }
 
   render() {
-    return(
-      <input id="controlledName" value={} />
+    return (
+          <input
+            id="controlledName"
+            type="text"
+            value={this.state.name}
+            onChange={e => this.setState({ name: e.target.value })}
+          />
     );
   }
 }
+
+Beast.defaultProps = {
+  name: "Yeti"
+};
 ```
