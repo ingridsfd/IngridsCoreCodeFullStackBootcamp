@@ -1,3 +1,7 @@
+# My mission statement:
+
+I'm Ingrid. Web Software Developer. I've been building projects from scratch, mainly with JavaScript skills, React & Node.Js. I started coding six months ago thanks to CoreCode io Software Development Fundamentals program as a Backend enthusiast. Currently, I'm coursing the Full-Stack bootcamp program. I want to be a developer because I'm changing career paths and I learned the valuable lesson of not being afraid of change. I'm a curious and commited person in every project I involve.
+
 # About this repo:
 
 This is for me to track my progress in the Full Stack bootcamp of Core Code. The exercises are optional to make and I know doing this, will help me dominate JavaScript syntax.
